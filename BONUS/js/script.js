@@ -1,10 +1,5 @@
 // selectors
-const teamList = document.getElementById("TeamList");
-
-
-// counters 
-
-
+const mainDom = document.getElementById("main");
 
 // arrays
 const team = [
@@ -42,24 +37,37 @@ const team = [
 
 console.log(team);
 
-// functions (independent)
-
-
-// functions (dependent)
-
-
-
 // events
 for (let member of team) {
   console.log("Name: "+ member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg);
   
-  let li = document.createElement("li");
+  // card div
+  let card = document.createElement("div");
+  card.className = 'card';
+  mainDom.appendChild(card);
+
+  // img-top inside card
   let img = document.createElement("img");
-  li.innerHTML = "Name: " + member.fullName + ' Role: ' + member.role;
+  img.className = 'card-img-top';
   img.src = member.profileImg;
   img.alt = member.fullName;
+  card.appendChild(img);
 
-  li.appendChild(img);
-  teamList.appendChild(li);
-  
+  // card-body div inside card
+  let cardBody = document.createElement("div");
+  cardBody.className = 'card-body';
+  card.appendChild(cardBody);
+
+
+  // card-title inside card-body
+  let cardTitle = document.createElement("h5")
+  cardTitle.className = 'card-title text-center';
+  cardTitle.innerText = member.fullName;
+  cardBody.appendChild(cardTitle);
+
+  // card-text inside cardbody
+  let role = document.createElement("p");
+  role.className = 'card-text text-center';
+  role.innerText = member.role;
+  cardBody.appendChild(role);
 }
