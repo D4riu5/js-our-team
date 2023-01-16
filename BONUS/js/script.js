@@ -11,27 +11,27 @@ const team = [
   {
     fullName: 'Wayne Barnett',
     role: 'Founder & CEO',
-    profileImg: "wayne-barnett-founder-ceo.jpg"
+    profileImg: "img/wayne-barnett-founder-ceo.jpg"
   },
   {
     fullName: 'Angela Caroll',
     role: 'Chief Editor',
-    profileImg: "angela-caroll-chief-editor.jpg"
+    profileImg: "img/angela-caroll-chief-editor.jpg"
   },
   {
     fullName: 'Walter Gordon',
     role: 'Office Manager',
-    profileImg: "walter-gordon-office-manager.jpg"
+    profileImg: "img/walter-gordon-office-manager.jpg"
   },
   {
     fullName: 'Angela Lopez',
     role: 'Social Media Manager',
-    profileImg: "angela-lopez-social-media-manager.jpg"
+    profileImg: "img/angela-lopez-social-media-manager.jpg"
   },
   {
     fullName: 'Scott Estrada',
     role: 'Developer',
-    profileImg: "scott-estrada-developer.jpg"
+    profileImg: "img/scott-estrada-developer.jpg"
   },
   {
     fullName: 'Barbara Ramos',
@@ -54,7 +54,12 @@ for (let member of team) {
   console.log("Name: "+ member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg);
   
   let li = document.createElement("li");
-  li.innerHTML = "Name: " + member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg;
-  teamList.appendChild(li);
+  let img = document.createElement("img");
+  li.innerHTML = "Name: " + member.fullName + ' Role: ' + member.role;
+  img.src = member.profileImg;
+  img.alt = member.fullName;
 
+  li.appendChild(img);
+  teamList.appendChild(li);
+  
 }
