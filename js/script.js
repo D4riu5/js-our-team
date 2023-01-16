@@ -1,5 +1,5 @@
 // selectors
-
+const teamList = document.getElementById("TeamList");
 
 
 // counters 
@@ -52,4 +52,9 @@ console.log(team);
 // events
 for (let member of team) {
   console.log("Name: "+ member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg);
+  
+  let li = document.createElement("li");
+  li.innerHTML = "Name: " + member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg;
+  teamList.appendChild(li);
+
 }
