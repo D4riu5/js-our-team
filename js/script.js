@@ -50,3 +50,6 @@ console.log(team);
 
 
 // events
+for (let member of team) {
+  console.log("Name: "+ member.fullName + ' Role: ' + member.role + ' picture: ' + member.profileImg);
+}
