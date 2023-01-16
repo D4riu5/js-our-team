@@ -36,7 +36,7 @@ const team = [
   {
     fullName: 'Barbara Ramos',
     role: 'Graphic Designer',
-    profileImg: "barbara-ramos-graphic-designer.jpg"
+    profileImg: "img/barbara-ramos-graphic-designer.jpg"
   },
 ];
 
